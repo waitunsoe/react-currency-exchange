@@ -4,14 +4,18 @@ import {
   InputLabel,
   OutlinedInput,
 } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { CurrencyContext } from "../contexts/CurrencyContext";
 
 const InputAmount = () => {
+  const { amount, setAmount } = useContext(CurrencyContext);
   return (
     <FormControl fullWidth>
-      <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
+      <InputLabel htmlFor="amount">Amount</InputLabel>
       <OutlinedInput
-        id="outlined-adornment-amount"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        id="amount"
         startAdornment={<InputAdornment position="start">$</InputAdornment>}
         label="Amount"
       />

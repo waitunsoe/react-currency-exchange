@@ -1,10 +1,19 @@
 import { CompareArrows } from "@mui/icons-material";
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
+import { CurrencyContext } from "../contexts/CurrencyContext";
 
 const SwitchCurrency = () => {
+  const { fromCurrency, setFromCurrency, toCurrency, setToCurrency } =
+    useContext(CurrencyContext);
+    
+  const handleSwitchCurrency = () => {
+    setFromCurrency(toCurrency);
+    setToCurrency(fromCurrency);
+  };
+
   return (
-    <Button color="primary" variant="contained">
+    <Button onClick={handleSwitchCurrency} color="primary" variant="contained">
       <CompareArrows />
     </Button>
   );

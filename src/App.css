@@ -4,4 +4,17 @@
   padding: 4rem 2rem;
   border-radius: 1rem;
   box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+@media (min-width: 768px){
+  .app{
+    width: 700px !important;
+  }
+}
+
+@media (min-width: 992px){
+  .app{
+    width: 768px !important;
+  }
 }
