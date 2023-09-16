@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import React from "react";
 
-import "./app.css";
+import "./App.css";
 import Result from "./components/Result";
 import Form from "./components/Form";
 import TitleText from "./components/TitleText";
